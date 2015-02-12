@@ -1,25 +1,105 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="x2H-aM-LKD">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS" customClass="PedigreeView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="hZE-jj-1JX" appends="YES" id="Yal-fm-FFX"/>
+                            <outletCollection property="gestureRecognizers" destination="KCb-mv-dmT" appends="YES" id="qsj-f5-do4"/>
+                        </connections>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Male" width="53" id="ii5-oK-1OD">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="tappedMale:" destination="vXZ-lx-hvc" id="JgN-ZT-zFQ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="Female" width="64" id="Kbj-nf-NEs">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="tappedFemale:" destination="vXZ-lx-hvc" id="hkD-X6-cwp"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="Not Sick" width="93" id="Zxc-EM-Tid">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="tappedStatus:" destination="vXZ-lx-hvc" id="1yk-c7-1NL"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="Line" width="50" id="C80-no-4aU">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="tappedLine:" destination="vXZ-lx-hvc" id="vSz-Zp-eq1"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="Hor." width="55" id="ei8-RR-wCa">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="tappedDir:" destination="vXZ-lx-hvc" id="vvA-yQ-e6R"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="AON-vh-kzQ"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="dirButton" destination="ei8-RR-wCa" id="nks-5e-EiH"/>
+                        <outlet property="femaleButton" destination="Kbj-nf-NEs" id="OP2-VV-Kp0"/>
+                        <outlet property="lineButton" destination="C80-no-4aU" id="hYF-tg-FSz"/>
+                        <outlet property="maleButton" destination="ii5-oK-1OD" id="jf0-1L-8KQ"/>
+                        <outlet property="pedView" destination="kh9-bI-dsS" id="b1X-nd-AN0"/>
+                        <outlet property="statusButton" destination="Zxc-EM-Tid" id="GRo-Ix-AGe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="hZE-jj-1JX">
+                    <connections>
+                        <action selector="singleTap:" destination="vXZ-lx-hvc" id="a4g-1r-QrV"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="KCb-mv-dmT">
+                    <connections>
+                        <action selector="panGesture:" destination="vXZ-lx-hvc" id="9TR-Rb-sjk"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="549" y="327"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Dmm-lO-ADh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" toolbarHidden="NO" id="x2H-aM-LKD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wxv-Ju-D1f">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="QRB-DF-GsM">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="NOT-0H-wxM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TJU-sf-b49" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-222" y="327"/>
         </scene>
     </scenes>
 </document>

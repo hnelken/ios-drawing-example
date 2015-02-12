@@ -14,6 +14,7 @@
 		4A30A8BF1A2CF38B0051AE33 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A30A8BE1A2CF38B0051AE33 /* Images.xcassets */; };
 		4A30A8C21A2CF38B0051AE33 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A30A8C01A2CF38B0051AE33 /* LaunchScreen.xib */; };
 		4A30A8CE1A2CF38B0051AE33 /* Custom_PedigreeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A30A8CD1A2CF38B0051AE33 /* Custom_PedigreeTests.m */; };
+		4A30A8D91A2CFC640051AE33 /* PedigreeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A30A8D81A2CFC640051AE33 /* PedigreeView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		4A30A8C71A2CF38B0051AE33 /* Custom PedigreeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Custom PedigreeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A30A8CC1A2CF38B0051AE33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A30A8CD1A2CF38B0051AE33 /* Custom_PedigreeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Custom_PedigreeTests.m; sourceTree = "<group>"; };
+		4A30A8D71A2CFC640051AE33 /* PedigreeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PedigreeView.h; sourceTree = "<group>"; };
+		4A30A8D81A2CFC640051AE33 /* PedigreeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PedigreeView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				4A30A8B61A2CF38B0051AE33 /* AppDelegate.m */,
 				4A30A8B81A2CF38B0051AE33 /* ViewController.h */,
 				4A30A8B91A2CF38B0051AE33 /* ViewController.m */,
+				4A30A8D71A2CFC640051AE33 /* PedigreeView.h */,
+				4A30A8D81A2CFC640051AE33 /* PedigreeView.m */,
 				4A30A8BB1A2CF38B0051AE33 /* Main.storyboard */,
 				4A30A8BE1A2CF38B0051AE33 /* Images.xcassets */,
 				4A30A8C01A2CF38B0051AE33 /* LaunchScreen.xib */,
@@ -220,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A30A8BA1A2CF38B0051AE33 /* ViewController.m in Sources */,
+				4A30A8D91A2CFC640051AE33 /* PedigreeView.m in Sources */,
 				4A30A8B71A2CF38B0051AE33 /* AppDelegate.m in Sources */,
 				4A30A8B41A2CF38B0051AE33 /* main.m in Sources */,
 			);
